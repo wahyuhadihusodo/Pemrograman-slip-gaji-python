@@ -1,0 +1,104 @@
+print("__________________Perhitungan Gaji___________________")
+print("PT Astra Sejahtera ")
+nama   = input("masukkan nama anda : ")
+print("pilih jabatan")
+print("1. OB      ")
+print("2. Karyawan")
+print("3. Manager ")
+print("4. Diretur ")
+print("5. RUPS    ")
+Pilih  = int(input("masukkan pilihan : "))
+lembur = float(input("masukkan total jam lembur : "))
+
+if Pilih == 1:
+    print("")
+    print("_____________________Slip gaji_________________________")
+    print("Nama pegawai:",nama)
+    print("Jabatan     : OB")
+    print("Lembur      :",lembur)
+    gaji_pokok = 2500000
+    tunjangan_transport = 500000
+    tunjangan_tetap = 1500000
+    lemburan = 80000*lembur
+    asuransi_jiwa = 50000
+    asuransi_kesehatan = 50000
+    asuransi_kecelakaan_kerja = 50000
+    asuransi_pensiun = 50000
+
+elif Pilih == 2:
+    print("")
+    print("_____________________Slip gaji_________________________")
+    print("Nama pegawai:",nama)
+    print("Jabatan     : Karyawan")
+    print("Lembur      :",lembur)
+    gaji_pokok = 4500000
+    tunjangan_transport = 700000
+    tunjangan_tetap = 2500000
+    lemburan = 90000*lembur
+    asuransi_jiwa = 50000
+    asuransi_kesehatan = 50000
+    asuransi_kecelakaan_kerja = 50000
+    asuransi_pensiun = 50000  
+
+elif Pilih == 3:
+    print("")
+    print("_____________________Slip gaji_________________________")
+    print("Nama pegawai:",nama)
+    print("Jabatan     : Manager")
+    print("Lembur      :",lembur)
+    gaji_pokok = 6500000
+    tunjangan_transport = 800000
+    tunjangan_tetap = 8500000
+    lemburan = 100000*lembur
+    asuransi_jiwa = 50000
+    asuransi_kesehatan = 50000
+    asuransi_kecelakaan_kerja = 50000
+    asuransi_pensiun = 50000
+    
+elif Pilih == 4:
+    print("")
+    print("_____________________Slip gaji_________________________")
+    print("Nama pegawai:",nama)
+    print("Jabatan     : Direktur")
+    print("Lembur      :",lembur)
+    gaji_pokok = 8500000
+    tunjangan_transport = 900000
+    tunjangan_tetap = 12500000
+    lemburan = 110000*lembur
+    asuransi_jiwa = 50000
+    asuransi_kesehatan = 50000
+    asuransi_kecelakaan_kerja = 50000
+    asuransi_pensiun = 50000 
+
+elif Pilih == 5:
+    print("")
+    print("_____________________Slip gaji_________________________")
+    print("Nama pegawai:",nama)
+    print("Jabatan     : RUPS")
+    print("Lembur      :",lembur)
+    gaji_pokok = 10000000
+    tunjangan_transport = 1000000
+    tunjangan_tetap = 15500000
+    lemburan = 120000*lembur
+    asuransi_jiwa = 50000
+    asuransi_kesehatan = 50000
+    asuransi_kecelakaan_kerja = 50000
+    asuransi_pensiun = 50000
+
+total_sebelum_potong_pajak = gaji_pokok+tunjangan_transport+tunjangan_tetap+lemburan-asuransi_jiwa-asuransi_kesehatan-asuransi_kecelakaan_kerja-asuransi_pensiun
+potong_pajak = total_sebelum_potong_pajak*0.02
+gaji_total = total_sebelum_potong_pajak-potong_pajak
+
+print("-------------------------------------------------------")
+print("gajipokok                :          +Rp. {:0,.2f}".format(gaji_pokok))
+print("Tunjangan transport      :          +Rp. {:0,.2f}".format(tunjangan_transport))
+print("Tunjangan Tetap          :          +Rp. {:0,.2f}".format(tunjangan_tetap))
+print("lembur                   :          +Rp. {:0,.2f}".format(lemburan))
+print("Asuransi jiwa            :          -Rp. {:0,.2f}".format(asuransi_jiwa))
+print("Asuransi kesehatan       :          -Rp. {:0,.2f}".format(asuransi_kesehatan))
+print("Asuransi kecelakaan kerja:          -Rp. {:0,.2f}".format(asuransi_kecelakaan_kerja))
+print("Asuransi pensiun         :          -Rp. {:0,.2f}".format(asuransi_pensiun))
+print("Potong pajak             :          -Rp. {:0,.2f}".format(potong_pajak))
+print("-------------------------------------------------------")
+print("TOTAL GAJI DITERIMA      :           Rp. {:0,.2f}".format(gaji_total))
+print("_______________________________________________________")
